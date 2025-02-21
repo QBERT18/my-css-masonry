@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 1em;
+  background-color: #242223;
+}
+
+img {
+  width: 100%;
+  display: block;
+  margin-top: 1em;
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* 
+If one image should be spanned across all columns
+
+img:nth-child(5) {
+  column-span: all;
+}
+
+ */
+
+/* 
+Solution 1 
+
+.list {
+  column-count: 3;
+}
+
+@media screen and (max-width: 767px) {
+  .list {
+    column-count: 2;
+  }
+}
+
+*/
+
+/* 
+Solution 2 
+
+.list {
+  columns: 3;
+}
+
+*/
+
+/* Solution 3 */
+.list {
+  columns: 300px;
+  column-gap: 1em;
+}
+
+.box {
+  color: white;
+}
+
+.box > p {
+  color: white;
+  columns: 300px;
+  margin-bottom: 3em;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
